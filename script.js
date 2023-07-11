@@ -1,17 +1,23 @@
-// const h2 = document.createElement("h2");
-// h2.textContent = "This content added by JavaScript";
-// document.querySelector("body").appendChild(h2)
-const button = document.getElementById("button")
-
-button.addEventListener("click", changeFact)
-
-function changeFact(event){
-  console.log('event', event)
-
-}
-function show(element){
-document.getElementById(element).hidden = false;
-}
-function hide(element){
-  document.getElementById(element).hidden=true;
+const button = document.getElementById("button");
+button.addEventListener("click", changeFact);
+const factsArray = [
+  `The "sixth sick sheik's sixth sheep's sick" is believed to be the toughest tongue twister in the English language.`,
+   `Wearing headphones for just an hour could increase the bacteria in your ear by 700 times.`, 
+   `"Stewardesses" is the longest word that is typed with only the left hand.`,
+   `"Dreamt" is the only English word that ends in the letters "mt".`,
+   `Bugs breath through holes on the sides of their bodies called sphericals`,
+]
+let count = 0;
+function changeFact(){
+  if(count === factsArray.length){
+    count=0;
+  }
+    const facts = document.getElementsByClassName('facts');
+    facts[0].remove();
+    const newFact = document.createElement('div');
+    newFact.className = 'facts';
+    newFact.textContent = factsArray[count];
+    const parentDiv = document.getElementById('mainBox');
+    parentDiv.prepend(newFact);
+    count++
 }

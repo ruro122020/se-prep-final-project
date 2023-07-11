@@ -9,8 +9,9 @@ function changeFact(event){
   console.log('event', event)
 
 }
-function show(){}
-function hide(){}
-function getFacts(){
-
+function show(element){
+document.getElementById(element).hidden = false;
+}
+function hide(element){
+  document.getElementById(element).hidden=true;
 }

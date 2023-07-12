@@ -9,20 +9,22 @@ const factsArray = [
 ]
 let count = 0;
 function changeFact(){
+
   const h1Child = document.getElementById("h1Facts");
+  const facts = document.getElementsByClassName('facts');
+  const newFact = document.createElement('div');
+  //count resets to zero once it hits the end of the array
   if(count === factsArray.length){
     count=0;
   }
-
-    const facts = document.getElementsByClassName('facts');
+    //remove current fact element showing
     facts[0].remove();
-    const newFact = document.createElement('div');
+    //give new element a class name
     newFact.className = 'facts';
+    //add text to new element
     newFact.textContent = factsArray[count];
+    //append new element 
     h1Child.parentNode.insertBefore(newFact, h1Child.nextSibling);
-   
-  
-    // const parentDiv = document.getElementById('mainBox');
-    // parentDiv.prepend(newFact);
+    //increase count to go to the next fact in the factsArray
     count++
 }

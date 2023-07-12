@@ -1,4 +1,4 @@
-const button = document.getElementById("button");
+const button = document.getElementById("factsButton");
 button.addEventListener("click", changeFact);
 const factsArray = [
   `The "sixth sick sheik's sixth sheep's sick" is believed to be the toughest tongue twister in the English language.`,

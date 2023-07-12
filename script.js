@@ -9,15 +9,20 @@ const factsArray = [
 ]
 let count = 0;
 function changeFact(){
+  const h1Child = document.getElementById("h1Facts");
   if(count === factsArray.length){
     count=0;
   }
+
     const facts = document.getElementsByClassName('facts');
     facts[0].remove();
     const newFact = document.createElement('div');
     newFact.className = 'facts';
     newFact.textContent = factsArray[count];
-    const parentDiv = document.getElementById('mainBox');
-    parentDiv.prepend(newFact);
+    h1Child.parentNode.insertBefore(newFact, h1Child.nextSibling);
+   
+  
+    // const parentDiv = document.getElementById('mainBox');
+    // parentDiv.prepend(newFact);
     count++
 }

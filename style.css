@@ -1,24 +1,37 @@
-/* body {
+body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-} */
+  height: 97vh;
+}
 
 #mainBox {
-  width: 100%;
-  min-height: 100vh;
-  display: grid;
-  border: 2px solid purple;
+  display: flex;
+  justify-content: center;
+  height: 50%;
 }
 
 .card {
-  border: 2px solid green;
-  width: 200px;
-  height: 100px;
-  place-self: center;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 12px;
+  width: 32rem;
+
 }
 
-h1 {}
+#h1Facts {
+  font-family: 'Fasthand', cursive;
+  font-size: 50px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid grey;
+  border-radius: 4px;
+}
 
-button {}
+#fact {
+  font-family: 'Fasthand', cursive;
+  font-size: 27px;
+
+  height: 50%;
+}
+
+.buttonWrapper {}

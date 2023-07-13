@@ -8,12 +8,13 @@ body {
 #mainBox {
   display: flex;
   justify-content: center;
-  height: 50%;
+  height: 54%;
 }
 
 .card {
+  background-image: linear-gradient(to bottom right, rgb(0, 4, 255), rgb(0, 255, 30));
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #FF10F0;
   border-radius: 12px;
   width: 32rem;
 
@@ -23,15 +24,27 @@ body {
   font-family: 'Fasthand', cursive;
   font-size: 50px;
   padding-bottom: 12px;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
+  color: white;
 }
 
 #fact {
   font-family: 'Fasthand', cursive;
   font-size: 27px;
-
+  color: white;
   height: 50%;
+  padding-top: 30px;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
-.buttonWrapper {}
+button {
+  padding: 6px 30px 6px 30px;
+  background: blue;
+  font-size: 16px;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Lobster', cursive;
+  border: 2px solid #39FF14;
+}
